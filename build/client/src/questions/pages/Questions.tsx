@@ -21,7 +21,7 @@ const Questions = () => {
         const getHomePageData = async () => {
             
             try{
-                const responseQuestionData = await sendRequest(`http://localhost:8000/api/questions?numberofquestions=${numberOfQuestions}`);
+                const responseQuestionData = await sendRequest(`/api/questions?numberofquestions=${numberOfQuestions}`);
                 setQuestions(responseQuestionData.questions);
             } catch (err) {}
         }

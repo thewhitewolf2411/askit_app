@@ -20,8 +20,8 @@ const Home = () => {
         const getHomePageData = async () => {
             
             try{
-                const responseUserData = await sendRequest(`http://localhost:8000/api/users?numberofusers=${numberOfUsers}`);
-                const responseQuestionData = await sendRequest(`http://localhost:8000/api/questions?numberofquestions=${numberOfQuestions}`);
+                const responseUserData = await sendRequest(`/api/users?numberofusers=${numberOfUsers}`);
+                const responseQuestionData = await sendRequest(`/api/questions?numberofquestions=${numberOfQuestions}`);
                 setUsers(responseUserData.users);
                 setQuestions(responseQuestionData.questions);
             } catch (err) {}

@@ -1,6 +1,6 @@
 const register = async (userData:any) => {
 
-    const response = await fetch("http://localhost:8000/api/signup", {
+    const response = await fetch("/api/signup", {
         method: "POST",
         body: userData,
         headers: {"Content-Type": "application/json"},
@@ -22,7 +22,7 @@ const logout = () => {
 }
 
 const login = async (userData:any) => {
-    const response = await fetch("http://localhost:8000/api/login", {
+    const response = await fetch("/api/login", {
       method: "POST",
       body: userData,
       headers: {"Content-Type": "application/json"},

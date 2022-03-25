@@ -28,7 +28,7 @@ const QuestionView = () => {
     useEffect(() => {
 
         const fetchQuestionData = async () => {
-            const response = await sendRequest(`http://localhost:8000/api/question/${questionId}`, 'GET', null, {
+            const response = await sendRequest(`/api/question/${questionId}`, 'GET', null, {
                 "Content-Type": "application/json",
                 Authorization: `Bearer ${user.token}`,
             });
@@ -79,7 +79,7 @@ const QuestionView = () => {
                 answer: formState.inputs.answer.value
             });
     
-            const response = await sendRequest(`http://localhost:8000/api/answer/${questionId}`, 
+            const response = await sendRequest(`/api/answer/${questionId}`, 
                 'POST', 
                 bodyData, 
                 {
@@ -106,7 +106,7 @@ const QuestionView = () => {
             upvote: upvote
         });
 
-        const response = await sendRequest(`http://localhost:8000/api/upvotequestion/${questionId}`, 
+        const response = await sendRequest(`/api/upvotequestion/${questionId}`, 
             'POST', 
             bodyData, 
             {

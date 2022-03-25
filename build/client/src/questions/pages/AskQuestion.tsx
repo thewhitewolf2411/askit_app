@@ -31,7 +31,7 @@ const AskQuestion = () => {
             author: user.userId
         });
 
-        const response = await sendRequest("http://localhost:8000/api/questions", "POST", questionData, {
+        const response = await sendRequest("/api/questions", "POST", questionData, {
             Authorization: `Bearer ${user.token}`,
             "Content-Type": "application/json" 
         });

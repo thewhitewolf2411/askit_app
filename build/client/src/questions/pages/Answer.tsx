@@ -45,7 +45,7 @@ const Answer = (props:any) => {
             upvote: upvote
         });
 
-        const response = await sendRequest(`http://localhost:8000/api/upvoteanswer/${props.answer.id}`, 
+        const response = await sendRequest(`/api/upvoteanswer/${props.answer.id}`, 
             'POST', 
             bodyData, 
             {

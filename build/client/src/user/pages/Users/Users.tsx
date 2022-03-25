@@ -16,7 +16,7 @@ const Users = () => {
         const getHomePageData = async () => {
             
             try{
-                const responseQuestionData = await sendRequest("http://localhost:8000/api/users");
+                const responseQuestionData = await sendRequest("/api/users");
                 setUsers(responseQuestionData.users);
             } catch (err) {}
         }

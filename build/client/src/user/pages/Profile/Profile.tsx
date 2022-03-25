@@ -50,7 +50,7 @@ const  Profile = () => {
 
     useEffect(()=> {
         const getProfileData = async () => {
-            const response = await sendRequest(`http://localhost:8000/api/user/${userId}`, 'GET', null, {
+            const response = await sendRequest(`/api/user/${userId}`, 'GET', null, {
                 "Content-Type": "application/json",
                 Authorization: `Bearer ${user.token}`,
               });
