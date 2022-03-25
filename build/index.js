@@ -44,7 +44,7 @@ app.use((error, req, res, next) => {
 mongoose_1.default
     .connect("mongodb+srv://theWhiteWolf2411:fJKbT4qkOnKzp0Gp@cluster0.kvrmd.mongodb.net/askit?retryWrites=true&w=majority")
     .then(() => {
-    app.listen(8000);
+    app.listen(process.env.PORT || 3000);
 })
     .catch((err) => {
     console.log(err);
