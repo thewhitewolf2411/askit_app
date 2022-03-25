@@ -1,0 +1,32 @@
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container,
+.container > .row,
+.container > .row > div {
+    height: 100%;
+}
+
+#countUp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#countUp .number{
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+#countUp .text{
+    font-weight: 300;
+    text-align: center;
+}
+
+#countUp .number + .text{
+    margin: 0 0 1rem;
+}
